@@ -4,7 +4,7 @@ import axios from "axios"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import './smallTouch.css';
+// import './smallTouch.css';
 import Skeleton from "../UI/Skeleton";
 import AOS from "aos";
 import 'aos/dist/aos.css';
@@ -107,9 +107,9 @@ const HotCollections = () => {
                           </div>
                           <div className="nft_coll_info rect-big">
                             <Link to="/explore">
-                              {user.length > 0 ? <h4 className="center">{user[index].title}</h4>:<div><Skeleton width={"100px"} height={"20px"}></Skeleton></div>}
+                              {user.length > 0 ? <h4 className="center">{user[index].title}</h4>:<div></div>}
                             </Link>
-                            {user.length > 0 ? <div className="center">ERC-{user[index].code}</div>: <Skeleton width={"80px"} height={"20px"}></Skeleton>}
+                            {user.length > 0 && <div className="center">ERC-{user[index].code}</div>}
                           </div>
                     </div>
                   </div>
