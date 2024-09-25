@@ -4,6 +4,7 @@ import axios from "axios"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import './smallTouch.css'
 import Skeleton from "../UI/Skeleton";
 import AOS from "aos";
 import 'aos/dist/aos.css';
@@ -51,7 +52,7 @@ const HotCollections = () => {
     return (
       <div
         className={className}
-        style={{ ...style ,border:"1px solid black",borderRadius:"50%",color:"black",width:"50px", height:"50px",display:"flex",justifyContent:"center",alignItems:"center"}}
+        style={{ ...style ,borderTop: '10px solid grey', borderRight: '10px solid grey',rotate: '45deg', width:'30px',height: '30px'}}
         onClick={onClick}
       />
     );
@@ -62,7 +63,7 @@ const HotCollections = () => {
     return (
       <div
         className={className}
-        style={{ ...style ,borderBottom: '10px solid grey', borderLeft: '10px solid grey',rotate: '45deg', width:'30px',height: '30px' }}
+        style={{ ...style ,position:"relative",left:"-60px",borderBottom: '10px solid grey', borderLeft: '10px solid grey',rotate: '45deg', width:'30px',height: '30px' }}
         onClick={onClick}
       />
     );
