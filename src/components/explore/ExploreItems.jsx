@@ -62,7 +62,7 @@ const ExploreItems = () => {
         </div>
       ))}
       {LoadOut &&  <div className="col-md-12 text-center">
-        <Link to="" id="loadmore" className="btn-main lead" onClick={load}>
+        <Link to="" id="loadmore" className="btn-main lead" data-aos="fade-up" data-aos-duration="3000" onClick={load}>
           Load more
         </Link>
       </div>}
