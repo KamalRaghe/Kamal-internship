@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../images/Ultraverse.png";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 const Footer = () => {
+  useEffect(() => {
+    AOS.init()
+  },[])
   return (
-    <footer className="footer-light">
+    <footer className="footer-light" data-aos="fade-up" data-aos-duration="3000">
       <div className="container">
         <div className="row">
           <div className="col-md-3 col-sm-6 col-xs-1">

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "../images/Ultraverse.png";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 const Nav = () => {
   const openNav = () => {
@@ -12,8 +14,12 @@ const Nav = () => {
     document.body.classList.remove("menu__open");
   };
 
+  useEffect(() => {
+    AOS.init()
+  },[])
+
   return (
-    <header className="transparent header-light scroll-light smaller">
+    <header className="transparent header-light scroll-light smaller" data-aos="fade-in" data-aos-duration="3000">
       <div className="container">
         <div className="row">
           <div className="col-md-12">
